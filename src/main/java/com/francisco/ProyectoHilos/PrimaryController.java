@@ -12,7 +12,6 @@ import AccesoAtomico.Cuenta;
 import Cooperantes.Contador;
 import Cooperantes.Hilo;
 import Model.Persona;
-import ModelDao.PersonaDAO;
 import ProductorConsumidor.Buffer;
 import ProductorConsumidor.Consumidor;
 import ProductorConsumidor.Productor;
@@ -64,7 +63,6 @@ public class PrimaryController {
 
 	public static ObservableList<Hilo> caja11 = FXCollections.observableArrayList();
 
-	public static ObservableList<Cuenta> caja = FXCollections.observableArrayList();
 
 	@FXML
 	public void muestrainfo(ActionEvent event) {

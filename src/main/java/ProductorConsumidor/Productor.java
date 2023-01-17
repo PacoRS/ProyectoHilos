@@ -7,7 +7,6 @@ import Model.Persona;
 public class Productor extends Thread {
 
 	private Buffer buffer;
-	private final String letras = "abcdefghijklmnopqrstuvxyz";
 	int nu=0;
 	PrimaryController pp;
 
@@ -21,7 +20,7 @@ public class Productor extends Thread {
 				Persona[] buffer2=cogePerona();
 				Persona c = buffer2[nu];
 				buffer.producir(c);
-				String ac=("Entra la persona " + c.getNombre() + " en la discoteca");
+				String ac=("Entra " + c.getNombre() + " a la discoteca");
 				System.out.println(ac);
 				c.setAccionEntrada(ac);
 				pp.personas.add(c);
@@ -36,9 +35,12 @@ public class Productor extends Thread {
 	}
 
 	public Persona[] cogePerona() {
-		 Persona[] buffer1=new Persona[2];
+		 Persona[] buffer1=new Persona[5];
 		 buffer1[0]=new Persona(1,"Paco");
-		 buffer1[1]=new Persona(2, "letras");
+		 buffer1[1]=new Persona(2,"Ana");
+		 buffer1[2]=new Persona(2,"Jose");
+		 buffer1[3]=new Persona(2,"Antonio");
+		 buffer1[4]=new Persona(2,"Manuel");
 		return buffer1;
 	}
 }

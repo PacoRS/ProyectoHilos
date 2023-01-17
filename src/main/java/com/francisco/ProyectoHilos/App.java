@@ -22,7 +22,7 @@ import ProductorConsumidor.Productor;
  */
 public class App extends Application {
 	private static final int NUM_HILOS = 6;
-	private static final int CUENTA_TOTAL = 600;
+	private static final int CUENTA_TOTAL = 96;
 	private static Scene scene;
 	PrimaryController pr = new PrimaryController();
 	Hilo h = new Hilo();
@@ -34,7 +34,7 @@ public class App extends Application {
 		stage.setScene(scene);
 		stage.show();
 
-		Buffer b = new Buffer(2);
+		Buffer b = new Buffer(5);
 		Productor p = new Productor(b);
 		Consumidor c = new Consumidor(b);
 		p.start();

@@ -14,7 +14,7 @@ public class Consumidor extends Thread {
 		while (true) {
 				if (buffer.estaVacia != true) {
 					Persona c = this.buffer.consumir();
-					String fr = ("Sale la persona " + c.getNombre() + " en la discoteca");
+					String fr = ("Sale " + c.getNombre() + " de la discoteca");
 					System.out.println(fr);
 					c.setAccionSalida(fr);
 				}
